@@ -1,7 +1,6 @@
 # roundworm-neural-data
 AKA C ELEGANS
-ANN based on C. Elegans connectome provided by:
-https://github.com/DTB-consortium/Digital_twin_brain-open/commits?author=zhongyuchen
+ANN based on C. Elegans connectome provided by [SergioPeignier](https://github.com/3BIM20162017/CElegansTP) via the OpenWorm project.
 
 TBD?: 
 * PCNN
