@@ -1,2 +1,8 @@
-# CElegansTP
-In this practical course we will analyze the connectome of C. elegans that has been found by the OpenWorm project so far.
+# earthworm-neural-data
+AKA C ELEGANS
+ANN based on C. Elegans connectome provided by:
+https://github.com/DTB-consortium/Digital_twin_brain-open/commits?author=zhongyuchen
+
+TBD?: 
+* PCNN
+* Keras
