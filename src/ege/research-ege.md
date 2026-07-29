@@ -56,7 +56,7 @@
 - `inh` = `inhibitory` - makes the target neuron less likely to fire
 - This is essentially an edge label/sign, similar to signed graphs in ML (like `+` and `-` on the edges)
 
-## Three 4 layers in this project
+## 4 layers in this project
 
 1. `Connectome.csv` - neuron-to-neuron synapses (the "brain" wiring)
 2. `Neurons_to_Muscles.csv` - how neural signals turn into physical movement (motor output)
