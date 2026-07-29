@@ -13,6 +13,16 @@ def load_connectome() -> pd.DataFrame:
     return df
 
 def remove_unnamed_columns(df) -> pd.DataFrame:    
+    """
+    Removes unnamed columns using drop function and returns it
+
+    Args:
+    df - pd.DataFrame (csv file)
+
+    Returns:
+    new_df - pd.DataFrame (csv file with unnamed columns removed)
+    """
+    
     new_df = df.drop(df.columns[df.columns.str.contains(
         'Unnamed', case=False)], axis=1, inplace=True)
     return new_df
