@@ -64,7 +64,7 @@
 4. `Distances.csv` - the 3D coordinates (x, y, z, in micrometers) for each neuron's cell body, giving its physical location within the worm. `x = left/right`, `y = anterior/posterior (head-to-tail)`, `z = dorsal/ventral`. 
 
 ### The relationship between the layers - Visualised
-- **Layers 1–3 describe the topology** - the map of "who is connected to whom, how strongly, and with what sign (excitatory/inhibitory). This is pure graph and it doesn't actually say anything about the physical space (such as where the neurons are or whether they're neighbours).
+- **Layers 1-3 describe the topology** - the map of "who is connected to whom, how strongly, and with what sign (excitatory/inhibitory). This is pure graph and it doesn't actually say anything about the physical space (such as where the neurons are or whether they're neighbours).
 - **Layer 4 describes the geometry** - where each neuron actually sits inside the worm's body. Combined with the connectivity data, this allows computing the physical (Euclidean) distance spanned by any synaptic connection.
 
 ```
@@ -115,9 +115,9 @@ Example row: ADAL,8.65,-322.6291,-1.089988
 | Field | Value | Meaning |
 |---|:---:|:---:|
 | Row label | ADAL | Neuron identifier - the "AD" neuron class, "A" sub-type, L = Left copy of the bilateral pair |
-| Column 0 | 8.65 | Left–right position (positive = left side of the body) |
-| Column 1 | -322.63 | Anterior–posterior position - a large negative number means it's far toward the head |
-| Column 2 | -1.09 | Dorsal–ventral position, near-neutral (roughly centered top-to-bottom) |
+| Column 0 | 8.65 | Left-right position (positive = left side of the body) |
+| Column 1 | -322.63 | Anterior-posterior position - a large negative number means it's far toward the head |
+| Column 2 | -1.09 | Dorsal-ventral position, near-neutral (roughly centered top-to-bottom) |
 
 - Reading this as a sentence: "ADAL's cell body sits slightly left of center, deep in the head, and roughly midway between the worm's back and belly."
 
@@ -199,7 +199,7 @@ So `MDL05` = "the 5th dorsal-left body-wall muscle, counting from the head." C. 
 |---|---|
 | ADEL | ADE - sensory neuron (see above); note it's directly synapsing onto muscle here, not just other neurons |
 | AS1, AS2, AS10, AS11 | AS motor neurons - a class of ~11 ventral nerve cord motor neurons (numbered by position along the body) that release acetylcholine to drive dorsal body-wall muscle contraction during movement |
-| MDL05, MDR05, MDL08, MDR08, MDL19–24, MDR19–24 | Muscle cells - decoded above (Dorsal, Left/Right, position number) |
+| MDL05, MDR05, MDL08, MDR08, MDL19-24, MDR19-24 | Muscle cells - decoded above (Dorsal, Left/Right, position number) |
 
 
 ### Sensory neuron data (Sensory.csv)
