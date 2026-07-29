@@ -8,24 +8,10 @@ DATA_DIRECTORY = Path(__file__).resolve().parent.parent / "data"
 # like -> int
 def load_connectome() -> pd.DataFrame:
     file_path = DATA_DIRECTORY / "Connectome.csv"
-    df = pd.read_csv(file_path)
-    remove_unnamed_columns(df)
-    return df
-
-def remove_unnamed_columns(df) -> pd.DataFrame:    
-    """
-    Removes unnamed columns using drop function and returns it
-
-    Args:
-    df - pd.DataFrame (csv file)
-
-    Returns:
-    new_df - pd.DataFrame (csv file with unnamed columns removed)
-    """
     
-    new_df = df.drop(df.columns[df.columns.str.contains(
-        'Unnamed', case=False)], axis=1, inplace=True)
-    return new_df
+    # read the unnamed column as the index (to get rid of the unnamed column)
+    df = pd.read_csv(file_path, index_col=0)
+    return df
 
 df_connectome = load_connectome()
 
