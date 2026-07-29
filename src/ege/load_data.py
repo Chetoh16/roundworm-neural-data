@@ -1,11 +1,15 @@
 import pandas as pd
 from pathlib import Path
 
-DATA_DIR = Path(__file__).resolve().parent.parent / "data"
+# gets data folder (without having to use a local path like ../data)
+DATA_DIRECTORY = Path(__file__).resolve().parent.parent / "data"
 
-print(DATA_DIR)
+# -> pd.DataFrame specifies the return type of this function
+# like -> int
+def load_connectome() -> pd.DataFrame:
+    file_path = DATA_DIRECTORY / "Connectome.csv"
+    return pd.read_csv(file_path)
+    
 
-# # df = data frame
-# df = pd.read_csv("Connectome.csv")
-
-# df.head(x)
+df_connectome = load_connectome()
+print(df_connectome.head())
